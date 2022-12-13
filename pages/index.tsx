@@ -1,8 +1,10 @@
+import React from 'react';
+import { Htag } from "../components";
+
 export default function Home(): JSX.Element {
-  const a = 1;
   return (
     <div>
-     {a}
+      <Htag tag="h1">Текст</Htag>
     </div>
   );
 }
