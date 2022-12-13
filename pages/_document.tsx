@@ -1,4 +1,4 @@
-import Document, { DocumentContext, DocumentInitialProps, Head, Main, NextScript } from "next/document";
+import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -8,13 +8,15 @@ class MyDocument extends Document {
 
     render(): JSX.Element {
         return (
-            <html lang="ru">
-                <Head />
+            <Html lang="ru">
+                <Head>
+                    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />
                 </body>
-            </html>
+            </Html>
         );
     }
 }
